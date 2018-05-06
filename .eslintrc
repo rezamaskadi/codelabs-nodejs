@@ -1,0 +1,26 @@
+{
+    "env": {
+      "mocha": true
+    },
+    "extends": ["standard"],
+    "plugins": ["mocha"],
+    "rules": {
+        "mocha/no-exclusive-tests": "error",
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}

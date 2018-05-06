@@ -1,0 +1,5 @@
+APP_PORT=3000
+
+MYSQL_URL=mysql://root:reza2421@localhost:3316/db-test
+
+JWT_SECRET=bDHz544I7VX9gcPoi5lJiuqKGygUBRYPgxXcRIMZ3Qg

@@ -1,0 +1,11 @@
+# using shell executor
+stages:
+  - build
+
+deploy:
+  stage: build
+  script:
+    - cp ~/alumni-api.env .env
+    - cd build && chmod +x build.sh && ./build.sh
+  only:
+    - master

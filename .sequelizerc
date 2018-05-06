@@ -1,0 +1,12 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+const path = require('path');
+const sequelizePath = 'database/sequelize'
+
+module.exports = {
+    'config': path.resolve(sequelizePath, 'config.js'),
+    'migrations-path': path.resolve(sequelizePath, 'migrations'),
+    'models-path': path.resolve(sequelizePath, 'models'),
+    'seeders-path': path.resolve(sequelizePath, 'seeders')
+};

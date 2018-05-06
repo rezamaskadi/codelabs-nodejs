@@ -1,0 +1,15 @@
+##### EDITABLE but do not delete below configuration, unless you know the consequences ###
+
+export APP_NAME=pwc-api-user
+export APP_HOST=dev.gits.id
+export APP_PORT=3030
+
+export REDIS_PORT=1010
+
+export MYSQL_USER=db-pwc
+export MYSQL_PASSWORD=r4h4514Web!
+export MYSQL_DATABASE=db-pwc
+export MYSQL_PORT=3316
+export MYSQL_ROOT_PASSWORD=r4h4514Web!
+
+export RABBIT_MQ_PORT=5672
