@@ -52,8 +52,6 @@ module.exports = function (MODULES, CONSTANTS, callback) {
         //     }
         // });
 
-        
-
         // Initialize mongoose (Mongoose)
         // TOOLS.SCHEMA = require(CONSTANTS.PATH.SCHEMA_LOADER)(MODULES);
 
@@ -66,9 +64,10 @@ module.exports = function (MODULES, CONSTANTS, callback) {
             // do login with our controllers
             done(null, {email: email, password: password});
         }));
-        
+
         // Initialize models (Sequelize)
         TOOLS.MODELS = require(CONSTANTS.PATH.MODELS_LOADER)(MODULES);
+        console.timeEnd('Loading app tools and database');
         callback(null, TOOLS);
         // Facebook token strategy, using data obtained from facebook access (and refresh) token
         // MODULES.PASSPORT.use(new MODULES.PASSPORT_FACEBOOK({
@@ -87,10 +86,8 @@ module.exports = function (MODULES, CONSTANTS, callback) {
         //     done(null, profile);
         // }));
 
-        console.timeEnd('Loading app tools and database');
         // Initialize Rabbit RPC Client
         // require(CONSTANTS.PATH.RABBIT_CLIENT)(TOOLS, MODULES, callback);
-        
     }
 
     function loadRabbitMQ (tools, callback) {
@@ -121,7 +118,6 @@ module.exports = function (MODULES, CONSTANTS, callback) {
         if (err) {
             throw err;
         } else {
-            console.timeEnd('Loading services, controllers and interfaces');
             callback(null, result);
         }
     });
